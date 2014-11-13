@@ -1,7 +1,6 @@
 (function() {
   var routes = {
     '/:article': showArticle,
-    '*': index,
     '/': index
   }
 
@@ -52,8 +51,9 @@
     page(path, auco(routes[path]))
   }
   page('*', function() {
-      $('body').innerText = 'Not found!!'
-    }) page()
+    $('body').innerText = 'Not found!!'
+  })
+  page()
     // auto coroutine //////////////////////////////////
   function auco(g) {
     return function() {
