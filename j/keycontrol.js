@@ -12,7 +12,6 @@ function leftbarKeyGen(a) {
 
 		var ulName=['','时间管理','环境搭建','Programming']
 		State.gpath=ulName[li.parentElement.id.substr(-1)]+'/'+li.innerText
-console.log(State.gpath);
 		page('/' + li.innerText)
 	}
 }
@@ -22,7 +21,7 @@ for (var i = Setting.lbKey.length; i--;) {
 }
 
 //open links
-kWrite.j= function(e) {
+kWrite.f= function(e) {
 		var a = $$('a')
 		console.log(a);
 		if (a) {
@@ -32,7 +31,6 @@ kWrite.j= function(e) {
 			})
 			key.setScope('link')
 		}
-		console.log(a);
 	}
 kLink = {}
 
@@ -45,7 +43,6 @@ function cmdClick(e) {
 function linkKeyGen(a) {
 	return function() {
 		var li = $('a[keycue=' + a + ']')
-		console.log(li);
 		cmdClick(li)
 			// key.setScope('write')
 	}
@@ -57,7 +54,6 @@ for (var i = Setting.linkKey.length; i--;) {
 kLink.esc = function() {
 	key.setScope('write')
 	var a = $$('a')
-	console.log(a);
 	if (a) {
 		$each(a, function(link) {
 			link.removeAttribute('keycue')
