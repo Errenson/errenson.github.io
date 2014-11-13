@@ -1,0 +1,23 @@
+leftbar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: fixed;
+	height: 100%;
+	width: 24%;
+	max-width: 250px;
+}
+leftbar ul{
+border-right: 1px solid #eef;
+}
+article{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 60%;
+	min-height: 100%;
+	margin: 0 8%;
+	padding-bottom: 10px;
+	position: absolute;
+	right: 0;
+}

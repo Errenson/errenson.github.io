@@ -1,0 +1,111 @@
+leftbar h1 {
+	margin: 5px 0;
+}
+leftbar li.focus {
+	background: #111;
+	color: #fff;
+	font-weight: bold;
+}
+leftbar li:before {
+	display: flex;
+	align-items: center;
+	padding: 1px 5px 3px 5px;
+	margin-right: 5px;
+}
+leftbar li:before,
+a:before {
+	content: attr(keycue);
+	margin-right: 1px;
+	font-family: Monaco, Consolas, monospace;
+	background-color: #111;
+	color: #FFF;
+	height: 100%;
+	font-weight: bold;
+}
+/*typography*/
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before {
+	font-weight: bold;
+}
+h1:before,
+h1:after {
+	content: '‧';
+	margin: 0 2px;
+}
+h2:before,
+h2:after {
+	content: '‥';
+	margin-right: 4px;
+}
+h3:before,
+h3:after {
+	content: '⸫';
+	margin: 0 7px;
+}
+h4:before,
+h4:after {
+	content: '⁘';
+	margin: 0 10px;
+}
+h5:before,
+h5:after {
+	content: '⁙';
+	margin: 0 13px;
+}
+a {
+	border-bottom: 1px solid;
+}
+h1 {
+	margin-top: 0.6rem;
+}
+h2,
+h3,
+h4 {
+	margin: 0.3rem 0;
+	display: flex;
+	align-items: center;
+}
+p {
+	margin: 0.3rem 0;
+}
+/*preloading*/
+#loadingProgressG {
+	width: 400px;
+	height: 2px;
+	overflow: hidden;
+	background-color: #000000;
+}
+.loadingProgressG {
+	background-color: #FFFFFF;
+	margin-top: 0;
+	margin-left: -400px;
+	-webkit-animation-name: bounce_loadingProgressG;
+	-webkit-animation-duration: 3.2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	animation-name: bounce_loadingProgressG;
+	animation-duration: 3.2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	width: 400px;
+	height: 2px;
+}
+@-webkit-keyframes bounce_loadingProgressG {
+	0% {
+		margin-left: -400px;
+	}
+	100% {
+		margin-left: 400px;
+	}
+}
+@keyframes bounce_loadingProgressG {
+	0% {
+		margin-left: -400px;
+	}
+	100% {
+		margin-left: 400px;
+	}
+}
