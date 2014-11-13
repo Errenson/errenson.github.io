@@ -6,6 +6,7 @@
 
   function* index(c) { // c:context
     key.setScope('write')
+    console.log(c.state);
     if (!c.state.ul1) {
       c.state.ul1 =
         yield $agj('https:/api.github.com/repos/Errenson/static-blog-posts/contents/时间管理')
