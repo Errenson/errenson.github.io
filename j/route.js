@@ -6,6 +6,7 @@
 
   function* index(c) { // c:context
     key.setScope('write')
+    document.title='Erren\'s static blog'
     if (!c.state.ul1) {
       c.state.ul1 =
         yield $agj('https:/api.github.com/repos/Errenson/static-blog-posts/contents/时间管理')
@@ -52,7 +53,7 @@
     page(path, auco(routes[path]))
   }
   page()
-    // auto coroutine //////////////////////////////////
+    // auto coroutine
   function auco(g) {
     return function() {
       var i = g.apply(this, arguments)
