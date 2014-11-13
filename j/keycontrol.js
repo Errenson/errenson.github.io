@@ -17,7 +17,7 @@ console.log(State.gpath);
 			console.log(rs);
 			$('article').innerHTML =marked(rs)
 		})
-		// page('/' + li.innerText)
+		page('/' + li.innerText)
 	}
 }
 for (var i = Setting.lbKey.length; i--;) {

@@ -32,7 +32,7 @@ function addLeftbar(arr, num) {
 
 function* showArticle(c) {
   console.log(c.path);
-  // document.title = c.path.split('/').pop()
+  document.title = c.path.split('/').pop()
   // if (!c.state.leftbar) {
   //   var d =
   //     yield $agj('/a/write/')
