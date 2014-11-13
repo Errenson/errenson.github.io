@@ -13,10 +13,6 @@ function leftbarKeyGen(a) {
 		var ulName=['','时间管理','环境搭建','Programming']
 		State.gpath=ulName[li.parentElement.id.substr(-1)]+'/'+li.innerText
 console.log(State.gpath);
-		$agr('https:/api.github.com/repos/Errenson/static-blog-posts/contents/'+State.gpath+'.md')(function(rs) {
-			console.log(rs);
-			$('article').innerHTML =marked(rs)
-		})
 		page('/' + li.innerText)
 	}
 }
