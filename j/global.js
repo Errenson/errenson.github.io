@@ -1,6 +1,6 @@
 State = {}
 Setting = {}
-Setting.lbKey = 'asdqwerzxcvjkl;'
+Setting.lbKey = 'dfqerzxcvjkl'
 Setting.linkKey = 'asdfqwerzxcvjkl;uiop,.m/0123456789'
 Links=[]
 $ = function(s) {
@@ -12,7 +12,6 @@ $$ = function(s) {
 $isStr = function(v) {
 	return typeof v == 'string'
 }
-
 //class
 $ca = function(a, b) {
 	if ($isStr(a)) a = $(a)

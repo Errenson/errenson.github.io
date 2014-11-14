@@ -19,9 +19,14 @@ for (var i = Setting.lbKey.length; i--;) {
 	var a = Setting.lbKey[i]
 	kWrite[a] = leftbarKeyGen(a)
 }
-
+kWrite.w=function() {
+	document.body.scrollTop-=500
+}
+kWrite.s=function() {
+	document.body.scrollTop+=500
+}
 //open links
-kWrite.f= function(e) {
+kWrite.a= function(e) {
 		var a = $$('a')
 		console.log(a);
 		if (a) {
