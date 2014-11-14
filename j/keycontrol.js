@@ -19,11 +19,19 @@ for (var i = Setting.lbKey.length; i--;) {
 	var a = Setting.lbKey[i]
 	kWrite[a] = leftbarKeyGen(a)
 }
-kWrite.w=function() {
-	document.body.scrollTop-=500
+kWrite.w=function() { document.body.scrollTop-=500 }
+kWrite.s=function() { document.body.scrollTop+=500 }
+kWrite.b=function() { page('/') }
+var isScroll=false
+kWrite.g=function() {
+	isScroll = !isScroll
+	autoScroll()
 }
-kWrite.s=function() {
-	document.body.scrollTop+=500
+function autoScroll() {
+	if(isScroll){
+		window.scrollBy(0,1)
+    setTimeout(autoScroll,60)
+	}
 }
 //open links
 kWrite.a= function(e) {
