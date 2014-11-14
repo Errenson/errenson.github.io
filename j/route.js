@@ -6,7 +6,7 @@
 
   function* index(c) { // c:context
     key.setScope('write')
-    document.title='Erren\'s static blog'
+    document.title = 'Erren\'s static blog'
     if (!c.state.ul1) {
       c.state.ul1 =
         yield $agj('https:/api.github.com/repos/Errenson/static-blog-posts/contents/时间管理')
@@ -28,7 +28,10 @@
     }
     //show readme.md
     $('article').innerHTML = marked(c.state.article)
-    document.body.scrollTop=0
+    //reset
+    document.body.scrollTop = 0
+    var liFocus = $('leftbar li.focus')
+    if (liFocus) $cr(liFocus, 'focus')
   }
 
   function addLeftbar(arr, num) {
@@ -38,14 +41,28 @@
   }
 
   function* showArticle(c) {
-    document.body.scrollTop=0
-    document.title = c.path.substr(1)
+    document.body.scrollTop = 0
+    var title = c.path.substr(1)
+    document.title = title
+    setFocusByText(title)
     if (!c.state.a) {
       c.state.a =
         yield $agr('https:/api.github.com/repos/Errenson/static-blog-posts/contents/' + State.gpath + '.md')
       c.save()
     }
     $('article').innerHTML = marked(c.state.a)
+  }
+
+  function setFocusByText(text) {
+    var li
+    $each($$('leftbar li'), function(listitem) {
+      if (listitem.innerText === text) {
+        li = listitem
+      }
+    })
+    var liFocus = $('leftbar li.focus')
+    if (liFocus) $cr(liFocus, 'focus')
+    $ca(li, 'focus')
   }
 
   // pass to page.js
