@@ -14,9 +14,9 @@
     //show leftbar
     if (!$('leftbar li')) {
       c.state.ul1 =
-        yield $agj('https:/api.github.com/repos/Errenson/static-blog-posts/contents/时间管理')
+        yield $agj('https:/api.github.com/repos/Errenson/static-blog-posts/contents/人生管理')
       c.state.ul2 =
-        yield $agj('https:/api.github.com/repos/Errenson/static-blog-posts/contents/环境搭建')
+        yield $agj('https:/api.github.com/repos/Errenson/static-blog-posts/contents/工具')
       c.state.ul3 =
         yield $agj('https:/api.github.com/repos/Errenson/static-blog-posts/contents/Programming')
       addLeftbar(c.state.ul1, 1)
