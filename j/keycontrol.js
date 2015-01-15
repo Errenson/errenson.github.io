@@ -20,8 +20,8 @@ for (var i = Setting.lbKey.length; i--;) {
 	kWrite[a] = leftbarKeyGen(a)
 }
 kWrite.w=function() { document.body.scrollTop-=500 }
-kWrite.s=function() { document.body.scrollTop+=500 }
-kWrite.b=function() { page('/') }
+kWrite.e=function() { document.body.scrollTop+=500 }
+kWrite.r=function() { page('/') }
 var isScroll=false
 kWrite.g=function() {
 	isScroll = !isScroll
@@ -34,7 +34,7 @@ function autoScroll() {
 	}
 }
 //open links
-kWrite.a= function(e) {
+kWrite.v= function(e) {
 		var a = $$('a')
 		console.log(a);
 		if (a) {

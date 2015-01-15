@@ -1,6 +1,6 @@
 State = {}
 Setting = {}
-Setting.lbKey = 'asdfzxcv'
+Setting.lbKey = 'asdfzxcq'
 Setting.linkKey = 'asdfqwerzxcvjkl;uiop,.m/0123456789'
 Links=[]
 $ = function(s) {
