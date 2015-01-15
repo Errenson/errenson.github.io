@@ -7,21 +7,18 @@
   function* index(c) { // c:context
     //reset
     key.setScope('write')
-    document.title = 'Erren\'s static blog'
+    document.title = 'Erren\'s blog demo'
     document.body.scrollTop = 0
     var liFocus = $('leftbar li.focus')
     if (liFocus) $cr(liFocus, 'focus')
     //show leftbar
     if (!$('leftbar li')) {
       c.state.ul1 =
-        yield $agj('https:/api.github.com/repos/Errenson/static-blog-posts/contents/人生管理')
-      c.state.ul2 =
         yield $agj('https:/api.github.com/repos/Errenson/static-blog-posts/contents/工具')
-      c.state.ul3 =
+      c.state.ul2 =
         yield $agj('https:/api.github.com/repos/Errenson/static-blog-posts/contents/Programming')
       addLeftbar(c.state.ul1, 1)
       addLeftbar(c.state.ul2, 2)
-      addLeftbar(c.state.ul3, 3)
         //enable keyboard navigation
       $each($$('leftbar li'), function(li, index) {
         li.setAttribute('keyCue', Setting.lbKey[index]);

@@ -10,7 +10,7 @@ function leftbarKeyGen(a) {
 		if(liFocus) $cr(liFocus,'focus')
 		$ca(li,'focus')
 
-		var ulName=['','人生管理','工具','Programming']
+		var ulName=['','工具','Programming']
 		State.gpath=ulName[li.parentElement.id.substr(-1)]+'/'+li.innerText
 		page('/' + li.innerText)
 	}
