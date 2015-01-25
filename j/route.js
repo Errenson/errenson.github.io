@@ -44,6 +44,7 @@
     document.title = title
     setFocusByText(title)
     if (!c.state.a) {
+      $('article').innerHTML = '<div id="loadingProgressG"><div id="loadingProgressG_1" class="loadingProgressG"> </div></div>'
       c.state.a =
         yield $agr('https:/api.github.com/repos/Errenson/static-blog-posts/contents/' + State.gpath + '.md')
       c.save()
