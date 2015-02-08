@@ -11,8 +11,8 @@ function leftbarKeyGen(a) {
 		$ca(li,'focus')
 
 		var ulName=['','工具','Programming']
-		State.gpath=ulName[li.parentElement.id.substr(-1)]+'/'+li.innerText
-		page('/' + li.innerText)
+		State.gpath=ulName[li.parentElement.id.substr(-1)]+'/'+li.innerHTML
+		page('/' + li.innerHTML)
 	}
 }
 for (var i = Setting.lbKey.length; i--;) {
@@ -47,16 +47,16 @@ kWrite.v= function(e) {
 	}
 kLink = {}
 
-function cmdClick(e) {
+if (a && $('h1').innerText) {//not firefox..
 	var evt = document.createEvent("MouseEvents");
-	//the tenth parameter of initMouseEvent sets ctrl key
 	evt.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, true, false, false, true, 0, null)
-	e.dispatchEvent(evt)
+} else{
+var evt = new MouseEvent("click")
 }
 function linkKeyGen(a) {
 	return function() {
 		var li = $('a[keycue=' + a + ']')
-		cmdClick(li)
+		li.dispatchEvent(evt)
 			// key.setScope('write')
 	}
 }
